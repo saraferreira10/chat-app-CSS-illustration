@@ -1,0 +1,256 @@
+@use "./../abstracts/variables" as *;
+
+.phone {
+  min-height: fit-content;
+  width: 22rem;
+  background-color: $color-secondary-white;
+  border-radius: 2rem;
+  padding: 0.9rem;
+  position: relative;
+  -webkit-box-shadow: 39px 54px 191px -43px rgba(171,171,171,1);
+  -moz-box-shadow: 39px 54px 191px -43px rgba(171,171,171,1);
+  box-shadow: 39px 54px 191px -43px rgba(171,171,171,1);
+  
+  @media (min-width: 1440px) {
+    & {
+      min-width: 25rem;
+
+    }
+  }
+
+  &__content {
+    background-color: $color-secondary-gray;
+    border-radius: 1.5rem;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-secondary-white;
+    height: 2.3rem;
+    width: 10rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  &__top {
+    background-image: linear-gradient(
+      to right,
+      $color-light-violet,
+      $color-light-magenta
+    );
+    color: $color-secondary-white;
+    height: 6.5rem;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 1rem 2.5rem;
+    align-items: center;
+
+    &-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding-left: 1rem;
+
+      & b {
+        font-size: 1rem;
+      }
+
+      & p {
+        font-size: 0.8rem;
+        color: $color-primary-pale-violet;
+      }
+    }
+
+    &-img {
+      width: 3rem;
+      height: 3rem;
+
+      background-image: url("/images/avatar.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      border-radius: 100%;
+      border: 1px solid $color-secondary-white;
+    }
+  }
+
+  &__msg-text {
+    padding: 1rem;
+    margin: 0 5%;
+    font-size: 0.8rem;
+
+    &--left {
+      background-color: #ede4f5;
+      color: $color-primary-moderate-violet;
+      border-radius: 1rem 1rem 1rem 0.25rem;
+
+      width: 75%;
+      padding-right: 2.5rem;
+    }
+
+    &--right {
+      background-color: $color-secondary-white;
+      color: $color-primary-violet;
+      border-radius: 1rem 1rem 0.25rem 1rem;
+      width: 78%;
+      margin-left: 100%;
+      transform: translateX(-110%);
+      padding-right: 2.5rem;
+    }
+
+    &--4 {
+      width: 55%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__msg-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    background-position: center;
+    background-size: cover;
+
+    &--1 {
+      background-image: url("../../../images/dog-image-1.jpg");
+    }
+
+    &--2 {
+      background-image: url("../../../images/dog-image-2.jpg");
+    }
+
+    &--3 {
+      background-image: url("../../../images/dog-image-3.jpg");
+    }
+  }
+
+  &__msg-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 5% 3px;
+  }
+
+  &__msg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  &__msg-service {
+    background-image: linear-gradient(
+      to right,
+      $color-light-magenta,
+      $color-light-violet
+    );
+    color: $color-secondary-white;
+    width: 70%;
+    margin-left: 1rem;
+    border-radius: 1rem 1rem 1rem 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+
+    &-left > label {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+
+    &-left > label > span {
+      position: relative;
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      border: 0.5px solid $color-secondary-white;
+      border-radius: 50%;
+      position: relative;
+      vertical-align: middle;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    &-left > input {
+      display: none;
+    }
+
+    &-left > input:checked + label > span::after {
+      content: "";
+      width: 0.7rem;
+      height: 0.7rem;
+      background-color: white;
+      position: absolute;
+      border-radius: 50%;
+      left: 55%;
+      top: 55%;
+      transform: translate(-55%, -55%);
+    }
+
+    &-right {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+
+    &-container {
+      width: auto;
+      background-color: $color-secondary-white;
+      border-radius: 2rem;
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+
+      & > input {
+        width: 80%;
+        border: none;
+        outline: none;
+        border-radius: inherit;
+        font-size: 0.7rem;
+        padding-left: 1rem;
+
+        &::placeholder {
+          color: $color-primary-grayish-blue;
+        }
+      }
+
+      & > button {
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 100%;
+        border: none;
+        background-color: $color-secondary-violet;
+        color: white;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          filter: brightness(2);
+        }
+      }
+    }
+  }
+}

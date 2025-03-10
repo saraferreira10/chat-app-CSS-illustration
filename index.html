@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/css/main.css" />
+    <title>Frontend Mentor | Chat App CSS</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
+      }
+      .attribution a {
+        font-size: 11px;
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main">
+        <div class="phone">
+          <div class="phone__content">
+            <div class="phone__top">
+              <div class="phone__top-left">
+                <span>&#10094;</span>
+                <div class="phone__top-img"></div>
+                <div>
+                  <b>Samuel Green</b>
+                  <p>Available to Walk</p>
+                </div>
+              </div>
+              <div class="phone__top-right">&#10247;</div>
+            </div>
+            <div class="phone__msg-container">
+              <div
+                class="phone__msg-text phone__msg-text--1 phone__msg-text--left"
+              >
+                That sounds great. I’d be happy with that.
+              </div>
+
+              <div
+                class="phone__msg-text phone__msg-text--2 phone__msg-text--left"
+              >
+                Could you send over some pictures of your dog, please?
+              </div>
+
+              <div class="phone__msg-img-container">
+                <div class="phone__msg-img phone__msg-img--1"></div>
+                <div class="phone__msg-img phone__msg-img--2"></div>
+                <div class="phone__msg-img phone__msg-img--3"></div>
+              </div>
+
+              <div
+                class="phone__msg-text phone__msg-text--3 phone__msg-text--right"
+              >
+                Here are a few pictures. She’s a happy girl!
+              </div>
+
+              <div
+                class="phone__msg-text phone__msg-text--4 phone__msg-text--right"
+              >
+                Can you make it?
+              </div>
+
+              <div
+                class="phone__msg-text phone__msg-text--5 phone__msg-text--left"
+              >
+                She looks so happy! The time we discussed works. How long shall
+                I take her out for?
+              </div>
+
+              <label for="30_min_walk">
+                <div class="phone__msg-service phone__msg-service--1">
+                  <div class="phone__msg-service-left">
+                    <input type="checkbox" id="30_min_walk" />
+                    <label for="30_min_walk">
+                      <span></span>
+                      30 minute walk
+                    </label>
+                  </div>
+                  <div class="phone__msg-service-right">$29</div>
+                </div>
+              </label>
+
+              <label for="1_hour_walk">
+                <div class="phone__msg-service phone__msg-service--2">
+                  <div class="phone__msg-service-left">
+                    <input type="checkbox" id="1_hour_walk" />
+                    <label for="1_hour_walk">
+                      <span></span>
+                      1 hour walk
+                    </label>
+                  </div>
+                  <div class="phone__msg-service-right">$49</div>
+                </div>
+              </label>
+
+              <div class="phone__input">
+                <div class="phone__input-container">
+                  <input type="text" placeholder="Type a message…" />
+                  <button>&#10095;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h1>Simple booking</h1>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </div>
+      </main>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/saraferreira10">Sara Ferreira</a>.
+      </div>
+    </div>
+
+    <div class="illustration-bg"></div>
+  </body>
+</html>

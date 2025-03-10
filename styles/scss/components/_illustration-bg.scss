@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+
+.illustration-bg {
+  background-image: linear-gradient(
+    150deg,
+    $color-light-magenta,
+    $color-light-violet
+  );
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: -2rem;
+  left: -50%;
+  border-radius: 0 0 500px 500px;
+  z-index: 100;
+
+  @media (min-width: 730px) {
+    & {
+      width: 40vw;
+      left: -5%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    & {
+      width: 30vw;
+      left: -5%;
+    }
+  }
+}

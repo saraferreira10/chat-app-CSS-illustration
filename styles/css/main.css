@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+}
+
+.main {
+  min-width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 1440px) {
+  .main {
+    flex-direction: row;
+    gap: 5rem;
+    width: 60vw;
+  }
+}
+
+.container {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.content {
+  text-align: center;
+}
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: hsl(271, 36%, 24%);
+}
+.content p {
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  color: hsl(270, 7%, 64%);
+}
+
+.illustration-bg {
+  background-image: linear-gradient(150deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: -2rem;
+  left: -50%;
+  border-radius: 0 0 500px 500px;
+  z-index: 100;
+}
+@media (min-width: 730px) {
+  .illustration-bg {
+    width: 40vw;
+    left: -5%;
+  }
+}
+@media (min-width: 1440px) {
+  .illustration-bg {
+    width: 30vw;
+    left: -5%;
+  }
+}
+
+.phone {
+  min-height: fit-content;
+  width: 22rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  padding: 0.9rem;
+  position: relative;
+  -webkit-box-shadow: 39px 54px 191px -43px rgb(171, 171, 171);
+  -moz-box-shadow: 39px 54px 191px -43px rgb(171, 171, 171);
+  box-shadow: 39px 54px 191px -43px rgb(171, 171, 171);
+}
+@media (min-width: 1440px) {
+  .phone {
+    min-width: 25rem;
+  }
+}
+.phone__content {
+  background-color: hsl(270, 20%, 96%);
+  border-radius: 1.5rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsl(0, 0%, 100%);
+  height: 2.3rem;
+  width: 10rem;
+  border-radius: 0 0 1rem 1rem;
+}
+.phone__top {
+  background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  color: hsl(0, 0%, 100%);
+  height: 6.5rem;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 1rem 2.5rem;
+  align-items: center;
+}
+.phone__top-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 1rem;
+}
+.phone__top-left b {
+  font-size: 1rem;
+}
+.phone__top-left p {
+  font-size: 0.8rem;
+  color: hsl(276, 100%, 81%);
+}
+.phone__top-img {
+  width: 3rem;
+  height: 3rem;
+  background-image: url("/images/avatar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.phone__msg-text {
+  padding: 1rem;
+  margin: 0 5%;
+  font-size: 0.8rem;
+}
+.phone__msg-text--left {
+  background-color: #ede4f5;
+  color: hsl(276, 55%, 52%);
+  border-radius: 1rem 1rem 1rem 0.25rem;
+  width: 75%;
+  padding-right: 2.5rem;
+}
+.phone__msg-text--right {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(271, 15%, 43%);
+  border-radius: 1rem 1rem 0.25rem 1rem;
+  width: 78%;
+  margin-left: 100%;
+  transform: translateX(-110%);
+  padding-right: 2.5rem;
+}
+.phone__msg-text--4 {
+  width: 55%;
+  margin-bottom: 1rem;
+}
+.phone__msg-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+  background-position: center;
+  background-size: cover;
+}
+.phone__msg-img--1 {
+  background-image: url("../../../images/dog-image-1.jpg");
+}
+.phone__msg-img--2 {
+  background-image: url("../../../images/dog-image-2.jpg");
+}
+.phone__msg-img--3 {
+  background-image: url("../../../images/dog-image-3.jpg");
+}
+.phone__msg-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem 5% 3px;
+}
+.phone__msg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+.phone__msg-service {
+  background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  color: hsl(0, 0%, 100%);
+  width: 70%;
+  margin-left: 1rem;
+  border-radius: 1rem 1rem 1rem 0.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+}
+.phone__msg-service-left > label {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.phone__msg-service-left > label > span {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  border: 0.5px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.phone__msg-service-left > input {
+  display: none;
+}
+.phone__msg-service-left > input:checked + label > span::after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  left: 55%;
+  top: 55%;
+  transform: translate(-55%, -55%);
+}
+.phone__msg-service-right {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.phone__input {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.phone__input-container {
+  width: auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.phone__input-container > input {
+  width: 80%;
+  border: none;
+  outline: none;
+  border-radius: inherit;
+  font-size: 0.7rem;
+  padding-left: 1rem;
+}
+.phone__input-container > input::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+.phone__input-container > button {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 100%;
+  border: none;
+  background-color: hsl(271, 36%, 24%);
+  color: white;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.phone__input-container > button:hover {
+  filter: brightness(2);
+}
+
+/*# sourceMappingURL=main.css.map */
